@@ -1,8 +1,8 @@
 pluginManagement {
     plugins {
         // Update this in libs.version.toml when you change it here
-        kotlin("jvm") version "1.6.10"
-        kotlin("plugin.serialization") version "1.6.10"
+        kotlin("jvm") version "1.6.20"
+        kotlin("plugin.serialization") version "1.6.20"
 
         // Update this in libs.version.toml when you change it here
         id("io.gitlab.arturbosch.detekt") version "1.19.0"
@@ -12,7 +12,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "template"
+rootProject.name = "finder"
 
 enableFeaturePreview("VERSION_CATALOGS")
 
