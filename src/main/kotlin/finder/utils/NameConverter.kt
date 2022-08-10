@@ -1,13 +1,19 @@
 package finder.utils
 
-class NameConverter {
-    companion object {
-        private val pattern = Regex("[a-z]+")
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.decodeFromStream
+import java.io.File
 
-        @JvmStatic
-        fun convert(name: String): String {
-            val words = pattern.findAll(name.lowercase()).map { it.value }.toList()
-            return "minecraft:${words.joinToString("_")}"
-        }
-    }
+private val pattern = Regex("[a-z]+")
+@OptIn(ExperimentalSerializationApi::class)
+private val lang = Json.decodeFromStream<Map<String, String>>(File("src/main/resources/finder/lang.json").inputStream())
+
+fun convertToMC(name: String): String {
+    val words = pattern.findAll(name.lowercase()).map { it.value }.toList()
+    return words.joinToString("_")
+}
+
+fun convertToDisplay(name: String): String? {
+    return lang[name]
 }
