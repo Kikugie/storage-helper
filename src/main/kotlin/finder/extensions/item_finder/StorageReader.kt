@@ -5,14 +5,13 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import java.io.File
 
-private val storage =
-    Json.decodeFromString(Storage.serializer(), File("src/main/resources/finder/storage.json").readText())
-
+var storageName: String = ""
 var itemData: Map<String, String> = mapOf()
 var colorData: Map<String, Color> = mapOf()
 
 @Serializable
 data class Storage(
+    val name: String,
     val halls: List<Hall>,
     val extras: List<Row>
 )
@@ -30,6 +29,11 @@ data class Row(
 )
 
 fun updateItemData() {
+    val storage =
+        Json.decodeFromString(Storage.serializer(), File("src/main/resources/finder/storage.json").readText())
+
+    storageName = storage.name
+
     val tempItemData: MutableMap<String, String> = mutableMapOf()
     val tempColorData: MutableMap<String, Color> = mutableMapOf()
 

@@ -30,6 +30,7 @@ class ItemFinder : Extension() {
                     respond {
                         embed {
                             thumbnail { url = CONFIG["icon_repository"].toString() + "$item.png" }
+                            title = storageName
                             field {
                                 name = "Item: ${convertToDisplay(item)}"
                                 value = getItemData(item)

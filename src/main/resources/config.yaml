@@ -1,4 +1,4 @@
 icon_repository: "https://gitlab.com/Kikugie/minecraft-icons/-/raw/main/files/"
 halls_message: "> Hall: %s\n> Row: %s\n> Position: %s"
 extras_message: "> Location: %s\n> \n> ⠀"
-not_found_message: "Item not found"
+not_found_message: "> Item not found\n> \n> ⠀"
