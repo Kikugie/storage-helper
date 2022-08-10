@@ -1,4 +1,4 @@
-package finder.extensions.item_finder
+package storagehelper.extensions.item_finder
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory

@@ -1,4 +1,4 @@
-package finder.extensions.item_finder
+package storagehelper.extensions.item_finder
 
 import com.kotlindiscord.kord.extensions.commands.Arguments
 import com.kotlindiscord.kord.extensions.commands.converters.impl.string
@@ -7,9 +7,9 @@ import com.kotlindiscord.kord.extensions.extensions.ephemeralSlashCommand
 import com.kotlindiscord.kord.extensions.types.respond
 import dev.kord.common.entity.Permission
 import dev.kord.rest.builder.message.create.embed
-import finder.TEST_SERVER_ID
-import finder.utils.convertToDisplay
-import finder.utils.convertToMC
+import storagehelper.TEST_SERVER_ID
+import storagehelper.utils.convertToDisplay
+import storagehelper.utils.convertToMC
 import kotlinx.datetime.Clock
 
 class ItemFinder : Extension() {
@@ -19,7 +19,9 @@ class ItemFinder : Extension() {
             name = "find"
             description = "Locate item in the storage"
 
-            guild(TEST_SERVER_ID)  // Otherwise it'll take an hour to update
+            if (TEST_SERVER_ID.toString() != "0") {
+                guild(TEST_SERVER_ID)
+            }
 
             action {
                 val item = convertToMC(arguments.item)
@@ -52,7 +54,9 @@ class ItemFinder : Extension() {
 
             requirePermission(Permission.ManageGuild)
 
-            guild(TEST_SERVER_ID)  // Otherwise it'll take an hour to update
+            if (TEST_SERVER_ID.toString() != "0") {
+                guild(TEST_SERVER_ID)
+            }
 
             action {
                 updateItemData()

@@ -1,4 +1,4 @@
-package finder.extensions.item_finder
+package storagehelper.extensions.item_finder
 
 import dev.kord.common.Color
 import kotlinx.serialization.Serializable
@@ -30,7 +30,7 @@ data class Row(
 
 fun updateItemData() {
     val storage =
-        Json.decodeFromString(Storage.serializer(), File("src/main/resources/finder/storage.json").readText())
+        Json.decodeFromString(Storage.serializer(), File("src/main/resources/item_finder/storage.json").readText())
 
     storageName = storage.name
 

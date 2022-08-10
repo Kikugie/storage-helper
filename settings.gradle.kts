@@ -12,7 +12,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "finder"
+rootProject.name = "storagehelper"
 
 enableFeaturePreview("VERSION_CATALOGS")
 

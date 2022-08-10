@@ -11,7 +11,7 @@ plugins {
     id("io.gitlab.arturbosch.detekt")
 }
 
-group = "finder"
+group = "storagehelper"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -50,7 +50,7 @@ dependencies {
 
 application {
     // This is deprecated, but the Shadow plugin requires it
-    mainClassName = "finder.AppKt"
+    mainClassName = "storagehelper.AppKt"
 }
 
 gitHooks {
@@ -69,7 +69,7 @@ tasks.withType<KotlinCompile> {
 tasks.jar {
     manifest {
         attributes(
-            "Main-Class" to "finder.AppKt"
+            "Main-Class" to "storagehelper.AppKt"
         )
     }
 }
