@@ -1255,5 +1255,21 @@
   "zombie_spawn_egg": "Zombie Spawn Egg",
   "zombie_villager_spawn_egg": "Zombie Villager Spawn Egg",
   "zombie_wall_head": "Zombie Wall Head",
-  "zombified_piglin_spawn_egg": "Zombified Piglin Spawn Egg"
+  "zombified_piglin_spawn_egg": "Zombified Piglin Spawn Egg",
+  "black_banner": "Black Banner",
+  "red_banner": "Red Banner",
+  "green_banner": "Green Banner",
+  "brown_banner": "Brown Banner",
+  "blue_banner": "Blue Banner",
+  "purple_banner": "Purple Banner",
+  "cyan_banner": "Cyan Banner",
+  "light_gray_banner": "Light Gray Banner",
+  "gray_banner": "Gray Banner",
+  "pink_banner": "Pink Banner",
+  "lime_banner": "Lime Banner",
+  "yellow_banner": "Yellow Banner",
+  "light_blue_banner": "Light Blue Banner",
+  "magenta_banner": "Magenta Banner",
+  "orange_banner": "Orange Banner",
+  "white_banner": "White Banner"
 }
