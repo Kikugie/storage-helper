@@ -36,6 +36,11 @@ dependencies {
     implementation(libs.kotlin.stdlib)
     implementation(libs.kx.ser)
 
+//  TODO: Make libs work
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.11")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.12.7")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.7")
+
     // Logging dependencies
     implementation(libs.groovy)
     implementation(libs.jansi)
